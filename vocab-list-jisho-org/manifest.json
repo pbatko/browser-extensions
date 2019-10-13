@@ -1,0 +1,30 @@
+{
+
+  "manifest_version": 2,
+  "name": "pbatko-jisho-org",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["http://classic.jisho.org/words*"],
+      "js": ["classic-jisho-org.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+	"tabs",
+	"unlimitedStorage",
+	"notifications",
+	"downloads"
+  ],
+
+  "background": {
+    "scripts": ["classic-jisho-org-background.js"]
+  }
+}
+
+
+
